@@ -1,3 +1,6 @@
+//there is the error in the code this is still not working i don't know the error
+
+
 function findDecimalNature(numerator, denominator) {
   let quotient = numerator / denominator;
   let decimalPart = quotient.toString().split('.')[1]; 
