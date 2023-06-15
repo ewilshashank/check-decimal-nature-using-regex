@@ -1,26 +1,11 @@
-//there is the error in the code this is still not working i don't know the which part of calculation is wrong
-
-
-function findDecimalNature(numerator, denominator) {
-  let quotient = numerator / denominator;
-  let decimalPart = quotient.toString().split('.')[1]; 
-
-  if (!decimalPart) {
-    return "terminating";
-  } else if (/^0+$/.test(decimalPart)) {
-    return "terminating non-recurring"; 
-  } else if (/^(\d+?)\1+$/.test(decimalPart)) {
-    if (parseInt(decimalPart) === 0) { 
-      return "terminating recurring"; 
-    } else {
-      return "non-terminating recurring"; 
-    }
+function classifyNumber(number) {
+  if (Number.isInteger(number)) {
+    return "Rational (Terminating)";
+  } else if (Number.isFinite(number)) {
+    return "Rational (Non-terminating Non-recurring)";
   } else {
-    return "non-terminating non-recurring"; 
+    return "Irrational (Non-terminating Recurring)";
   }
 }
 
-let numerator = 7;
-let denominator = 6;
-
-console.log(findDecimalNature(numerator, denominator));
+console.log(classifyNumber(5, 2)); 
