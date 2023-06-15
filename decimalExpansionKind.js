@@ -1,4 +1,4 @@
-//there is the error in the code this is still not working i don't know the error
+//there is the error in the code this is still not working i don't know the which part of calculation is wrong
 
 
 function findDecimalNature(numerator, denominator) {
